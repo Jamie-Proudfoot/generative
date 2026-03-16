@@ -1,0 +1,2 @@
+model type,batch size,learning rate,epochs,start_epoch,use shuffle,use augmentation,eval num samples,eval batch size,learning rate scheduler
+SmilesTrainer,1024,0.0001,20,0,True,3,256,256,StepLR

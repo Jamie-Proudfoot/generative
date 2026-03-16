@@ -1,0 +1,17 @@
+Notes
+
+1. Ground states were computed in pm6 (toluene) but transition states were in pm6 (water)
+
+2. Nitro-Michael and Aza-Michael reactions have different atom numbering indices
+
+3. The HDF5 files are unix-ordered! (e.g. 1, 10, 100, 1000, 101, 102, etc.)
+
+4. Core-atom indexing differs between aza-Michael and nitro-Michael datasets:
+
+nitro-michael
+O C CA CB
+4 3 2 1
+
+aza-michael
+O C CA CB
+3 2  1  4

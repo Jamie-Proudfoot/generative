@@ -1,0 +1,29 @@
+Useful commands (SLURM array job submissions)
+
+squeue -ht pending,running -r | wc -l
+
+array_submit *.gjf
+
+sbatch --array=1-999 ZINC_x_y.slm
+
+find . -size 0 -delete
+
+cp x/*.err x_err
+
+for i in *.err; do cp "../x/${i%.err}.out" . 2>/dev/null; done
+
+out_to_gjf *.gjf
+
+array_submit *.out
+
+sbatch compress.slm
+
+
+Data:
+
+ZINC_Michael_250k_500_100.csv.gz - unlabelled SMILES of ZINC Michael acceptors
+(250k in size, max MolWt 500, max len SMILES 100)
+
+tranches/ZINC_1.csv - labelled 1/10th of total labelled data (ZINC_Michael_data.csv.gz)
+
+N.B. SMILES are OpenEye canonical (from ZINC23), therefore use RDKit to convert to RDKit canonical
